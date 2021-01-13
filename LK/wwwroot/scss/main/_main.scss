@@ -1,0 +1,7 @@
+﻿body {
+    background-color:blue;
+}
+
+p {
+    @extend .text-white;
+}
