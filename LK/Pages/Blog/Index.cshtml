@@ -1,0 +1,11 @@
+﻿@page
+@model LK.Pages.Blog.IndexModel
+@{
+    ViewData["Title"] = "Recent Posts";
+}
+
+@foreach (var post in Model.posts)
+{
+    <a asp-page="/Blog/Post" asp-route-slug="@post.Slug">@post.Slug</a>
+}
+
