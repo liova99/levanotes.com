@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\js\bootstrap\**" />
+    <Content Remove="wwwroot\js\bootstrap\**" />
+    <EmbeddedResource Remove="wwwroot\js\bootstrap\**" />
+    <None Remove="wwwroot\js\bootstrap\**" />
+  </ItemGroup>
+    
+    <ItemGroup>
+        <Folder Include="Pages\" />
+    </ItemGroup>
+
+    <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
     <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
@@ -16,10 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\LK.DB\LK.DB.csproj" />
     <ProjectReference Include="..\LK.Lib\LK.Lib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\js\bootstrap\" />
   </ItemGroup>
 
 </Project>
