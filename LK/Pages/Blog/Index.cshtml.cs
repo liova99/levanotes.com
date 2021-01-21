@@ -13,7 +13,7 @@ namespace LK.Pages.Blog
     {
         private readonly IPostRepo _postRepo;
 
-        public IEnumerable<Post> posts { get; set; }
+        public IEnumerable<Post> Posts { get; set; }
 
         public IndexModel(IPostRepo postRepo)
         {
@@ -21,7 +21,7 @@ namespace LK.Pages.Blog
         }
         public void OnGet()
         {
-            posts = _postRepo.GetAllPosts();
+            Posts = _postRepo.GetAllPosts();
         }
     }
 }
