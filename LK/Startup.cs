@@ -85,8 +85,21 @@ namespace LK
 
             app.UseHttpsRedirection();
 
-            app.UseStaticFiles();
+            const string cacheOneYear = "31536000";
+            app.UseStaticFiles(new StaticFileOptions
+            {
 
+                OnPrepareResponse = context =>
+                {
+                    // Cache static files that have a Version (asp-append-version="true")
+                    if (!string.IsNullOrEmpty(context.Context.Request.Query["v"]))
+                    {
+                        context.Context.Response.Headers["Cache-Control"] = $"public,max-age={cacheOneYear}";
+                        context.Context.Response.Headers["Expires"] = DateTime.UtcNow.AddYears(1).ToString("R"); // RFC1123 Time Format
+                    }
+                }
+
+            });
             app.UseMarkdown();
 
             app.UseRouting();
