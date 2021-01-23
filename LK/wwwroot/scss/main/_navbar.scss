@@ -1,0 +1,40 @@
+﻿header {
+    max-width:950px;
+    margin: 0.4rem auto;
+    font-family: $font-ibm;
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: baseline;
+
+        #logo{
+            grid-column: 1/2;
+            
+            a {
+                text-decoration:none;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+
+        ul{
+            list-style: none;
+            grid-column: 3/-1;
+            display: flex;
+            justify-content: space-evenly;
+
+            li{
+
+                a{
+                    text-decoration:none;
+                    font-size:1.5rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}

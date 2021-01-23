@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LK</title>
+    <title>Levan Kelesidis - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     <environment exclude="Development">
         @* TODO: add cdn and dont forget to fallback*@
@@ -12,25 +12,26 @@
 </head>
 <body>
     <header>
-        <nav role="navigation">
-            <div class="container">
+            <nav role="navigation">
                 <div id="logo">
                     @if (@Context.Request.Path == "/")
                     {
-                        <h1 id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">LK</a></h1>
+                        <h1 id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></h1>
                     }
                     else
                     {
-                        <p id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">LK</a></p>
+                        <p id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></p>
                     }
                 </div>
                 <ul class="">
                     <li class="">
                         <a class="" asp-area="" asp-page="/Blog/Index">Blog</a>
                     </li>
+                    <li class="">
+                        <a class="" asp-area="" asp-page="/CV">CV</a>
+                    </li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -43,8 +44,8 @@
             &copy; @DateTime.Now.Year - LK
         </div>
     </footer>
-    
-     <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

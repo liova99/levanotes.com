@@ -41,7 +41,8 @@
         "launchBrowser": true,
         "launchUrl": "http://dev.lk.com:5959",
         "environmentVariables": {
-            "ASPNETCORE_ENVIRONMENT": "Development"
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
         }
     }
   }
