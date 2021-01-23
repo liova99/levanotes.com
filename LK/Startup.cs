@@ -83,6 +83,8 @@ namespace LK
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithReExecute("/NotFound");
+
             app.UseHttpsRedirection();
 
             const string cacheOneYear = "31536000";
