@@ -1,9 +1,24 @@
-﻿@import "../../lib/bootstrap/scss/bootstrap.scss";
+﻿// global resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
      
 }
 
 p {
-    @extend .text-white;
+    
 }
+
+h1 {
+    font-family: $font-ibm;
+}
+
+/*#region GridTutorial */
+
+
+
+/*#endregion */

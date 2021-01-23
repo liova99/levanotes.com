@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LK", "LK\LK.csproj", "{9C279CF2-4C35-4529-A458-F04154460317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LK", "LK\LK.csproj", "{9C279CF2-4C35-4529-A458-F04154460317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LK.DB", "LK.DB\LK.DB.csproj", "{0808138B-6684-4E50-8738-3FC368D3AE9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LK.DB", "LK.DB\LK.DB.csproj", "{0808138B-6684-4E50-8738-3FC368D3AE9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LK.Lib", "LK.Lib\LK.Lib.csproj", "{7C664601-08B7-4259-8599-9FB397BF33E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LK.Lib", "LK.Lib\LK.Lib.csproj", "{7C664601-08B7-4259-8599-9FB397BF33E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{BBC5ADB8-AA9B-4AC9-8F60-4A06C7750BAB}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

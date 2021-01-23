@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LK</title>
+    <title>Levan Kelesidis - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     <environment exclude="Development">
         @* TODO: add cdn and dont forget to fallback*@
@@ -12,22 +12,26 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">LK</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Blog/Index">Blog</a>
-                        </li>
-                    </ul>
+            <nav role="navigation">
+                <div id="logo">
+                    @if (@Context.Request.Path == "/")
+                    {
+                        <h1 id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></h1>
+                    }
+                    else
+                    {
+                        <p id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></p>
+                    }
                 </div>
-            </div>
-        </nav>
+                <ul class="">
+                    <li class="">
+                        <a class="" asp-area="" asp-page="/Blog/Index">Blog</a>
+                    </li>
+                    <li class="">
+                        <a class="" asp-area="" asp-page="/CV">CV</a>
+                    </li>
+                </ul>
+            </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -41,7 +45,7 @@
         </div>
     </footer>
 
-     <script src="~/js/site.min.js" asp-append-version="true"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Recent Posts";
 }
 
-@foreach (var post in Model.posts)
+@foreach (var post in Model.Posts)
 {
     <a asp-page="/Blog/Post" asp-route-slug="@post.Slug">@post.Slug</a>
 }
