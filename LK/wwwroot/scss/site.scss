@@ -1,1 +1,7 @@
-﻿@import "main/main.scss";
+﻿//@import "../lib/bootstrap/scss/bootstrap.scss";
+
+@import "fonts/_fonts.scss";
+@import "main/_variables.scss";
+
+@import "main/main.scss";
+@import "main/_navbar.scss";
