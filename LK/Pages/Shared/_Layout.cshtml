@@ -12,36 +12,36 @@
 </head>
 <body>
     <header>
-            <nav role="navigation">
-                <div id="logo">
-                    @if (@Context.Request.Path == "/")
-                    {
-                        <h1 id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></h1>
-                    }
-                    else
-                    {
-                        <p id="site-title"><a class="navbar-brand" title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></p>
-                    }
-                </div>
-                <ul class="">
-                    <li class="">
-                        <a class="" asp-area="" asp-page="/Blog/Index">Blog</a>
-                    </li>
-                    @*<li class="">
-                        <a class="" asp-area="" asp-page="/CV">CV</a>
-                    </li>*@
-                </ul>
-            </nav>
+        <nav role="navigation">
+            <div id="logo">
+                @if (@Context.Request.Path == "/")
+                {
+                    <h1 id="site-title"><a title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></h1>
+                }
+                else
+                {
+                    <p id="site-title"><a title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></p>
+                }
+            </div>
+            <ul>
+                <li>
+                    <a asp-area="" asp-page="/Blog/Index">Blog</a>
+                </li>
+                @*<li class="">
+                    <a class="" asp-area="" asp-page="/CV">CV</a>
+                </li>*@
+            </ul>
+        </nav>
     </header>
-    <div class="container">
+    <div class="site-container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - LK
+    <footer>
+        <div>
+            &copy; @DateTime.Now.Year - Levan Kelesidis
         </div>
     </footer>
 

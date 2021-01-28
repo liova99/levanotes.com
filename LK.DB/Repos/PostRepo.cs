@@ -21,16 +21,21 @@ namespace LK.DB.Repos
 
             _posts = new List<Post>()
             {
-                new Post() { Id = 1, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/post1.md", Title="My super first Post", Slug = _urlHelper.CreateSlug( "This is my first post")},
+                new Post() { Id = 1, Tags= new string[] {"C#", "ASP.NET", "LK" }, Category=_categoryRepo.GetCategoryById(1),
+                    FileName = "~/posts/how-to-do-it.md", Title="How to do it", Slug = _urlHelper.CreateSlug( "how-to-do-it"), 
+                    ImgPath = "/posts/m.how-to-do-it.assets/pexels-markus-spiske-450.jpg",ImgAlt= "alt of an image" },
                 
                 new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/post2.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "This is my Second post")},
+                    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
+                ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
 
-                new Post() { Id = 3, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
-                     FileName = "~/posts/post3.md", Title="My super Third Post", Slug = _urlHelper.CreateSlug( "This is my 3th post")}
+                 new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
+                    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
+                ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
 
-
+                  new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
+                    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
+                ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
             };
 
         }

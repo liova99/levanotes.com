@@ -15,7 +15,7 @@
 var libScripts = [
     // highlight.min.js', will be added in _Post.cshtml for performance reasons
     'wwwroot/lib/jquery/dist/jquery.min.js',
-    'wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js',
+    //'wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js',
 ]
 
 var siteScripts = [

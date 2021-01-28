@@ -1,27 +1,31 @@
 ﻿header {
-    margin-top: 0.4rem;
+    margin-top: .4rem;
     margin-bottom: 1rem;
-    font-family: $font-ibm;
 
     a {
         color: black;
         text-decoration: none;
+
+        &:hover {
+            text-decoration:none;
+        }
     }
 
     nav {
-       display: flex;
-       justify-content:center;
+        display: flex;
+        justify-content: center;
 
         #logo {
 
             a {
+                font-family: $font-ibm;
                 font-size: 1.8rem;
                 font-weight: 500;
             }
         }
 
         ul {
-           display:none;
+            display: none;
         }
     }
 }
@@ -39,7 +43,7 @@
             align-items: baseline;
 
             #logo {
-                margin-left: 0.5rem;
+                margin-left: .5rem;
             }
 
             ul {
@@ -47,6 +51,11 @@
                 list-style: none;
                 grid-column: 2/-1;
                 justify-content: space-evenly;
+
+                a {
+                    font-family: $font-ibm;
+                    font-size: 1.5rem;
+                }
             }
         }
     }
