@@ -6,7 +6,7 @@ namespace LK.DB.Repos
     public interface ICategoryRepo
     {
         IEnumerable<Category> GetAllCategories();
-        Category GetCategoryById(int id);
+        string GetCategoryById(int id);
         Category GetCategoryByName(string name);
     }
 }

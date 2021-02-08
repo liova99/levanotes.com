@@ -11,7 +11,7 @@ namespace LK.DB.Repos
     {
         private List<Category> _categories { get; set; }
 
-        private Category Undefined = new Category { Name = "Undefined" };
+        private Category Undefined = new Category { Name = "article" };
 
         public CategoryRepo()
         {
@@ -26,12 +26,13 @@ namespace LK.DB.Repos
             return _categories;
         }
 
-        public Category GetCategoryById(int id)
+        public string GetCategoryById(int id)
         {
-            var category = _categories.FirstOrDefault(c => c.Id == id);
-            return category ?? Undefined;
+            var category = _categories.FirstOrDefault(c => c.Id == id).Name;
+            return !string.IsNullOrWhiteSpace(category) ? category : Undefined.Name;
         }
 
+        // TODO: Return string
         public Category GetCategoryByName(string name)
         {
             var category = _categories.FirstOrDefault(c => c.Name == name);
