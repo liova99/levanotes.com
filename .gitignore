@@ -342,3 +342,5 @@ healthchecksdb
 #Start Custom
 
 /localAssets
+
+/.well-known
