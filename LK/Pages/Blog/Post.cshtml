@@ -1,8 +1,10 @@
-﻿@page "/{cat}/{slug}"
+﻿@page "/{lang}/{cat}/{slug}/"
 @model LK.Pages.Blog.PostModel
 @{
     ViewData["Title"] = Model.Post.Title;
 }
 
-<h2>Hello From POST @Model.Post.Slug</h2>
-<markdown Filename="@Model.Post.FileName"></markdown>
+
+<div class="post-wrapp">
+    <markdown Filename="@Model.Post.FileName"></markdown>
+</div>

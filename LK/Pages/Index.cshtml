@@ -1,14 +1,24 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Levan Kelesidis Blog";
 }
 
 <div class="site-container">
-    <div id="start-page">
-        <p>Hey, This website is under redesign</p>
-        <br />
-        <h2>Check Levan's Blog instead <a asp-page="Blog/Index">Latest Posts</a></h2>
-    </div id="start-page">
-</div>
 
+    @{
+        int index = 0;
+    }
+
+    @foreach (var post in Model.Posts)
+    {
+        ViewData["IsFirst"] = false;
+        if (index == 0)
+        {
+            ViewData["IsFirst"] = true;
+        }
+        <partial name="~/Pages/Shared/Partial/_PostPreviewPartial.cshtml" view-data="ViewData" model="post" />
+
+        index++;
+    }
+</div>
