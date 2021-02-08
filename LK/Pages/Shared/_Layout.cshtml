@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Levan Kelesidis - @ViewData["Title"]</title>
+    <title> @ViewData["Title"] - Levan Kelesidis Blog</title>
     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     <environment exclude="Development">
         @* TODO: add cdn and dont forget to fallback*@
@@ -23,18 +23,18 @@
                     <p id="site-title"><a title="Levan Kelesidis" rel="home" asp-area="" asp-page="/Index">Levan Kelesidis</a></p>
                 }
             </div>
-            <ul>
+            @*<ul>
                 <li>
                     <a asp-area="" asp-page="/Blog/Index">Blog</a>
                 </li>
-                @*<li class="">
+                <li class="">
                     <a class="" asp-area="" asp-page="/CV">CV</a>
-                </li>*@
-            </ul>
+                </li>
+            </ul>*@
         </nav>
     </header>
     <div class="site-container">
-        <main role="main" class="pb-3">
+        <main role="main" >
             @RenderBody()
         </main>
     </div>
