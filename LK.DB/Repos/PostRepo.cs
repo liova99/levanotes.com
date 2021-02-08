@@ -28,8 +28,8 @@ namespace LK.DB.Repos
                     FilePath = "/posts/publish-asp-on-linux.md",
                     Title="Publish an ASP.Net App on a Linux VPS",
                     Slug = _urlHelper.CreateSlug( "publish-a-asp-dotnet-app-on-linux"),
-                    ImgPath = "/posts/m.how-to-do-it.assets/pexels-markus-spiske-450.jpg",
-                    ImgAlt= "alt of an image",
+                    ImgPath = "/posts/m.publish-asp-on-linux.assets/linux-penguin.jpg",
+                    ImgAlt= "linux penguin ",
                     Language = Post.Languages.EN,
                     Date = new DateTime(2021,02,05)
                 },
