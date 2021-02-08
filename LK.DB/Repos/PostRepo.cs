@@ -21,21 +21,47 @@ namespace LK.DB.Repos
 
             _posts = new List<Post>()
             {
-                new Post() { Id = 1, Tags= new string[] {"C#", "ASP.NET", "LK" }, Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/how-to-do-it.md", Title="How to do it", Slug = _urlHelper.CreateSlug( "how-to-do-it"), 
-                    ImgPath = "/posts/m.how-to-do-it.assets/pexels-markus-spiske-450.jpg",ImgAlt= "alt of an image" },
+                new Post() {
+                    Id = 1,
+                    Tags= new string[] {"C#", "ASP.NET" },
+                    Category=_categoryRepo.GetCategoryById(1),
+                    FileName = "~/posts/publish-asp-on-linux.md",
+                    Title="Publish an ASP.Net App on a Linux VPS",
+                    Slug = _urlHelper.CreateSlug( "publish-a-asp-dotnet-app-on-linux"),
+                    ImgPath = "/posts/m.how-to-do-it.assets/pexels-markus-spiske-450.jpg",
+                    ImgAlt= "alt of an image",
+                    Language = Post.Languages.EN,
+                    Date = new DateTime(2021,02,05)
+                },
+
+                //new Post() { Id = 2,
+                //    Tags= new string[] {"C#", "ASP.NET" },
+                //    Category=_categoryRepo.GetCategoryById(1),
+                //    FileName = "~/posts/hard-to-say.md",
+                //    Title="My super second Post",
+                //    Slug = _urlHelper.CreateSlug( "hard to say"),
+                //    ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg",
+                //    ImgAlt= "alt of an image",
+                //    Language = Post.Languages.EN
+                //},
                 
-                new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
-                ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
+                    
 
-                 new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
-                ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
+                // new Post() {
+                //     Id = 2,
+                //     Tags= new string[] {"C#", "ASP.NET" },
+                //     Category=_categoryRepo.GetCategoryById(1),
+                //     FileName = "~/posts/hard-to-say.md",
+                //     Title="My super second Post",
+                //     Slug = _urlHelper.CreateSlug( "hard to say"),
+                //     ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg",
+                //     ImgAlt= "alt of an image",
+                //     Language = Post.Languages.EN
+                // },
 
-                  new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
-                ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
+                //  new Post() { Id = 2, Tags= new string[] {"C#", "ASP.NET" }, Category=_categoryRepo.GetCategoryById(1),
+                //    FileName = "~/posts/hard-to-say.md", Title="My super second Post", Slug = _urlHelper.CreateSlug( "hard to say"),
+                //ImgPath = "/posts/m.hard-to-say.assets/all-you-need-is-coffee.jpg", ImgAlt= "alt of an image"},
             };
 
         }

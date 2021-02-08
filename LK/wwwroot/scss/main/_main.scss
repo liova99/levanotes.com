@@ -14,9 +14,14 @@ p {
     font-family: $font-lora;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: $text-font-size;
     line-height: 1.6rem;
     font-weight: 400;
+}
+
+li {
+    font-family: $font-lora;
+    font-size: $text-font-size;
 }
 
 a {
@@ -52,7 +57,8 @@ code {
     font-family: $font-fira;
     font-size: 0.8rem;
     font-weight: 300;
-
+    background-color: $clr-light-gray;
+    padding: .1rem;
     scrollbar-width: thin;
 
     &::-webkit-scrollbar {
@@ -93,7 +99,7 @@ code {
     max-width: 350px;
 
     @include media-up(sm) {
-        max-width: 700px;
+        max-width: $site-container-width;
         padding-left: .5rem;
         padding-right: .5rem;
     }

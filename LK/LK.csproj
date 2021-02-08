@@ -13,10 +13,6 @@
     <EmbeddedResource Remove="wwwroot\js\bootstrap\**" />
     <None Remove="wwwroot\js\bootstrap\**" />
   </ItemGroup>
-    
-    <ItemGroup>
-        <Folder Include="Pages\" />
-    </ItemGroup>
 
     <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.1" />

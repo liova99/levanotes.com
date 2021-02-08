@@ -1,5 +1,9 @@
 ﻿$clr-primary: #02CAE5;
 $clr-secondary: #5AB900;
+$clr-light-gray: #E8E8E8;
+$clr-dark-gray: #3C3C3C;
+
+$text-font-size: 1.1rem;
 
 $font-ibm: 'IBM Plex Sans', 'Chap', Arial;
 $font-fira: 'Fira Code', 'Lucida Console', 'Courier New', Courier, monospace, Consolas;
@@ -15,5 +19,6 @@ $media-breakpoints: (
   xxl: 1400px
 );
 
+$site-container-width: 700px;
 
 
