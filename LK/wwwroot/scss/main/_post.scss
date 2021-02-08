@@ -56,3 +56,17 @@
         }
     }
 }
+
+.github-box {
+    border-top: 2px solid $clr-light-gray;
+    border-bottom: 2px solid $clr-light-gray;
+    padding: .5rem;
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .post-wrap-note {
+        font-size: .9rem;
+    }
+}

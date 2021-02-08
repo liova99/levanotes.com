@@ -25,7 +25,7 @@ namespace LK.DB.Repos
                     Id = 1,
                     Tags= new string[] {"C#", "ASP.NET" },
                     Category=_categoryRepo.GetCategoryById(1),
-                    FileName = "~/posts/publish-asp-on-linux.md",
+                    FilePath = "/posts/publish-asp-on-linux.md",
                     Title="Publish an ASP.Net App on a Linux VPS",
                     Slug = _urlHelper.CreateSlug( "publish-a-asp-dotnet-app-on-linux"),
                     ImgPath = "/posts/m.how-to-do-it.assets/pexels-markus-spiske-450.jpg",
