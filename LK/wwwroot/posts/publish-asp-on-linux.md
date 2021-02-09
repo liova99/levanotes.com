@@ -210,8 +210,8 @@ We pass the requests that are looking for test.levanotes.com to the http://local
     ProxyPass / http://localhost:5000/
     ProxyPassReverse / http://localhost:5000/
 
-    ErrorLog ${APACHE_LOG_DIR}helloapp-error.log
-    CustomLog ${APACHE_LOG_DIR}helloapp-access.log common
+    ErrorLog ${APACHE_LOG_DIR}/the-web-app-error.log
+    CustomLog ${APACHE_LOG_DIR}/the-web-app-access.log common
 
     # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
     # error, crit, alert, emerg.
@@ -227,10 +227,6 @@ We pass the requests that are looking for test.levanotes.com to the http://local
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 
 ```
-
-<div class="img-lg">
-<img src="/posts/m.publish-asp-on-linux.assets/image-20210204211405813.png"  />
-</div>
 
 
 Save and exit nano
@@ -313,13 +309,13 @@ Then I define `SyslogIdentifier`, my username and set the environment to product
 To start the Service I Run 
 
 ```bash
-sudo systemctl start test.lenanotes.com.service
+sudo systemctl start test.levanotes.com.service
 ```
 
 I can check if everything runs without errors with this command
 
 ```bash
-sudo journalctl -u test.lenanotes.com.service -e 
+sudo journalctl -u test.levanotes.com.service -e 
 ```
 
 `-e` will start the log at the end.
