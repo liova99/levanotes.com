@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace LevaNotes.Pages
+namespace LevaNotes.Web.Pages
 {
     public class PrivacyModel : PageModel
     {
