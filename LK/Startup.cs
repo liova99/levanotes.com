@@ -21,12 +21,15 @@ namespace LK
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            this.env = env;
         }
 
         public IConfiguration Configuration { get; }
+
+        private readonly IWebHostEnvironment env;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -70,11 +73,14 @@ namespace LK
                 o.AppendTrailingSlash = true;
             });
 
-            services.AddHttpsRedirection(options =>
+            if (env.IsProduction())
             {
-                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
-                options.HttpsPort = 5003;
-            });
+                services.AddHttpsRedirection(options =>
+                {
+                    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+                    options.HttpsPort = 5003;
+                });
+            }
 
             services.Configure<ForwardedHeadersOptions>(options =>
             {
@@ -84,7 +90,7 @@ namespace LK
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
             if (env.IsDevelopment())
             {
