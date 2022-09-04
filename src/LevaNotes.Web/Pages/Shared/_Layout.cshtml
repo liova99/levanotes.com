@@ -9,27 +9,6 @@
     <link rel="stylesheet" href="~/LevaNotes.styles.css" asp-append-version="true" />
 </head>
 <body>
-        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-    <header>
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">LevaNotes</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    </header>
-        </nav>*@
     <header>
         <nav role="navigation">
             <div id="logo">
@@ -42,14 +21,6 @@
                     <p id="site-title"><a title="Levan Kelesidis" rel="home" asp-page="/Index">LevaNotes</a></p>
                 }
             </div>
-            @*<ul>
-            <li>
-            <a asp-area="" asp-page="/Blog/Index">Blog</a>
-            </li>
-            <li class="">
-            <a class="" asp-area="" asp-page="/CV">CV</a>
-            </li>
-            </ul>*@
         </nav>
     </header>
     <div class="container">
@@ -58,11 +29,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - LevaNotes - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    <cache vary-by="@DateTime.UtcNow.Year">
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - @DateTime.UtcNow.Year LevaNotes
+            </div>
+        </footer>
+    </cache>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
