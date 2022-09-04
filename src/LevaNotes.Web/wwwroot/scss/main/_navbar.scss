@@ -1,0 +1,68 @@
+﻿header {
+    margin-top: .4rem;
+    margin-bottom: 1rem;
+
+    a {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration:none;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+
+        #logo {
+
+            a {
+                font-family: $font-ibm;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+
+        ul {
+            display: none;
+        }
+    }
+}
+
+@include media-up(sm) {
+    header {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        nav {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: baseline;
+
+            #logo {
+                margin-left: .5rem;
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+                grid-column: 2/-1;
+                justify-content: space-evenly;
+
+                a {
+                    font-family: $font-ibm;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include media-up(md) {
+    header {
+        max-width: 950px
+    }
+}

@@ -1,0 +1,30 @@
+﻿@using static LevaNotes.Web.Pages.Shared.Components.PostPreview.PostPreviewViewComponent
+@model PostPreviewDto
+
+@{
+    var postPreviewBigSmall = "post-preview--small";
+    var imgWrappBigSmall = "post-preview-img-wrapp--small";
+
+    if (Model.IsFirst)
+    {
+        postPreviewBigSmall = "post-preview--big";
+        imgWrappBigSmall = "post-preview-img-wrapp--big";
+    }
+
+    var imgRouteTemp = Model.Post.BasePath + Model.Post.ImgName;
+
+}
+
+<div class="post-preview @postPreviewBigSmall">
+    <div class="post-preview-content">
+        <a class="post-preview-title post-preview-title--primary" href="@Model.RelativeUrl" >
+            <h2>@Model.Post.Title - @Model.IsFirst</h2>
+        </a>
+        <a class="button" href="@Model.RelativeUrl">Read The Post</a>
+    </div>
+    <a href="@Model.RelativeUrl">
+        <div class="post-preview-img-wrapp @imgWrappBigSmall">
+            <img src="@imgRouteTemp" alt="@Model.Post.ImgAlt" />
+        </div>
+    </a>
+</div>

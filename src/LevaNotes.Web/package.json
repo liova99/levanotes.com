@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-sass": "^3.1.0",
+    "sass": "^1.54.5"
+  }
+}

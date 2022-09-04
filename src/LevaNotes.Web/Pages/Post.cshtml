@@ -1,0 +1,29 @@
+﻿@page "/post/{language}/{category}/{slug}"
+@model LevaNotes.Web.Pages.PostModel
+@{
+    Layout = "_PostLayout";
+    ViewBag.Title = Model.Title;
+}
+
+<cache vary-by="@Model.CacheKey" expires-sliding="@TimeSpan.FromHours(24)">
+    <div class="post-wrapp">
+        @Model.HtmlStringrFromMD
+    </div>
+
+    <div class="github-box">
+        <h2>
+            You can comment, suggest an edit (fix my typos/grammar :) ) on Github*.
+        </h2>
+        <p>
+            Link to the post on Github
+            <a href="https://github.com/liova99/levanotes.com/tree/master/LK/wwwroot/@Model.FilePath" target="_blank">
+                @Model.Title
+            </a>
+        </p>
+
+        <p class="post-wrap-note">
+            * Please don't be rude. If being rude makes you feed good, there is a problem. If you don't see any problem with that, that means there is a big problem!
+        </p>
+
+    </div>
+</cache>

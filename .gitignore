@@ -344,3 +344,7 @@ healthchecksdb
 /localAssets
 
 /.well-known
+/src/LevaNotes.Web/wwwroot/posts/2022/08/21/testPost
+/src/LevaNotes.Web/wwwroot/posts/2022/08/21/name.png
+/src/LevaNotes.Web/wwwroot/posts/2022/08/21/image-20220820114457933.png
+/src/LevaNotes.Web/wwwroot/posts/2022/08/21/image-20220820114434018.png
