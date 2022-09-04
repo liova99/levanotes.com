@@ -281,8 +281,9 @@ KillSignal=SIGINT
 SyslogIdentifier=dotnet-test.levanotes
 # My username
 User=levan
-# Set Env to production
-Environment=ASPNETCORE_ENVIRONMENT=Production 
+# Set Env Variables
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=https://localhost:7510
 
 [Install]
 WantedBy=multi-user.target
