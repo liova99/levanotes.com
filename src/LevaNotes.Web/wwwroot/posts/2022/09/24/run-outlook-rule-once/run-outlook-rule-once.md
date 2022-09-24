@@ -1,16 +1,16 @@
-# How To run Outlook rules once
+# How to run Outlook rules once
 
 
 
-I didn't found any "official" way. You could write you own macros, but this is not what someone want to do. 
+I have not found an "official" way. You could write your own macros, but that's not something anyone wants to do.
 
-I found a easy workaround which you may apply. 
+I have found a easy workaround that you may apply. 
 
-So create you rule
+So, create you rule
 
 ![RulesWizard-Outlook](RulesWizard-Outlook.webp)
 
-Click "Next" till the last page
+Click "Next" until the last page
 
 Then!
 
@@ -26,7 +26,7 @@ Click Finish to run this rule once
 
 
 
-If you wan' t to run this rule again, got to  "Manage Rule & Alerts..."
+If you want to execute this rule again, you must to go to the "Manage Rule & Alerts..."
 
 ![Manage-Rules-Outlook](Manage-Rules-Outlook.webp)
 
@@ -36,11 +36,11 @@ Double click your rule
 
 
 
-And repeat the steps above by clicking "Next" till the last page. 
+Repeat the above steps by clicking "Next" until you reach the last page. 
 
-Select like before  "Run this rule now on messages already in Inbox"
+As before, select "Run this rule now on messages already in Inbox"
 
-And click "Finish" to run this rule again
+Click "Finish" to run this rule again
 
 ![RulesWizard-Outlook2](RulesWizard-Outlook2.webp)
 

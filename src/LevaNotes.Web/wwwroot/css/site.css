@@ -307,6 +307,7 @@ header nav ul {
   border-top: 2px solid #E8E8E8;
   border-bottom: 2px solid #E8E8E8;
   padding: 0.5rem;
+  margin-top: 1.5rem;
 }
 .github-box h2 {
   font-size: 1.3rem;
