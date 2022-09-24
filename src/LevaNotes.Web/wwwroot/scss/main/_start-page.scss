@@ -1,4 +1,4 @@
-﻿.post-preview-title {
+.post-preview-title {
 
     h2{
         font-weight:500;
@@ -44,7 +44,8 @@
     margin-bottom: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
-
+    max-width: 1000px;
+    margin: 2rem auto;
     .post-preview-content {
         display: flex;
         flex-direction: column;
@@ -66,7 +67,7 @@
 
         img {
             width: 100%;
-            align-self:center;
+            align-self: center;
         }
     }
 
@@ -100,7 +101,6 @@
             width: 350px;
             max-width: 350px;
             height: 300px;
-
         }
     }
 }

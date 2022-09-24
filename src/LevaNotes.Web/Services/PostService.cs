@@ -30,6 +30,19 @@ public class PostService
                 Language = Languages.EN,
                 Date = new DateTimeOffset(2021,02,05,0,0,0, new TimeSpan(1,0,0))
             },
+            new Post() {
+                PostId = 15879,
+                Tags= new string[] {"MS-Office", "Outlook" },
+                Category= "MS-Office",
+                BasePath = "/posts/2022/09/24/run-outlook-rule-once/",
+                FileName = "run-outlook-rule-once.md",
+                Title="How To run Outlook rules once",
+                //Slug = "publish-a-asp-dotnet-app-on-linux",
+                ImgName = "logo-outlook-300.webp",
+                ImgAlt= "logo-outlook.webp ",
+                Language = Languages.EN,
+                Date = new DateTimeOffset(2022,09,24,0,0,0, new TimeSpan(1,0,0))
+            },
 
         //    new Post() {
         //        PostId = 15879,
