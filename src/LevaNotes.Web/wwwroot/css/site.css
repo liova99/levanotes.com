@@ -24,6 +24,8 @@ a {
   background-color: transparent;
 }
 a:hover {
+  color: #02CAE5;
+  opacity: 0.9;
   text-decoration: underline;
 }
 

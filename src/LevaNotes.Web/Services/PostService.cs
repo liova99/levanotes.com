@@ -28,7 +28,7 @@ public class PostService
                 ImgName = "linux-penguin.jpg",
                 ImgAlt= "linux penguin ",
                 Language = Languages.EN,
-                Date = new DateTimeOffset(2021,02,05,0,0,0, new TimeSpan(1,0,0))
+                CreateDate = new DateTimeOffset(2021,02,05,0,0,0, new TimeSpan(1,0,0))
             },
             new Post() {
                 PostId = 15879,
@@ -41,7 +41,20 @@ public class PostService
                 ImgName = "logo-outlook-300.webp",
                 ImgAlt= "logo-outlook.webp ",
                 Language = Languages.EN,
-                Date = new DateTimeOffset(2022,09,24,0,0,0, new TimeSpan(1,0,0))
+                CreateDate = new DateTimeOffset(2022,09,24,0,0,0, new TimeSpan(1,0,0))
+            },
+            new Post() {
+                PostId = 15880,
+                Tags= new string[] {"Productivity", "Fun" },
+                Category= "Productivity",
+                BasePath = "/posts/2022/11/06/pomodoro-is-not-productive/",
+                FileName = "pomodoro-is-not-productive.md",
+                Title=" Pomodoro technique is a concurrency of unproductiveness",
+                //Slug = "publish-a-asp-dotnet-app-on-linux",
+                ImgName = "henry-co-spiral.jpg",
+                ImgAlt= "spiral stares",
+                Language = Languages.EN,
+                CreateDate = new DateTimeOffset(2022,11,06,0,0,0, new TimeSpan(1,0,0))
             },
 
         //    new Post() {
@@ -68,7 +81,9 @@ public class PostService
     /// <returns></returns>
     public IReadOnlySet<Post> GetPosts(int offset, int max = 10)
     {
-        IReadOnlySet<Post> posts = _posts.Skip(offset).Take(max).ToHashSet();
+        IReadOnlySet<Post> posts = _posts.Skip(offset).Take(max)
+            .OrderByDescending(x => x.CreateDate)
+            .ToHashSet();
         
         return posts;
     }

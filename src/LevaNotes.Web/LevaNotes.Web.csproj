@@ -6,12 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="wwwroot\posts\2022\08\20\testPost\**" />
-    <Content Remove="wwwroot\posts\2022\08\20\testPost\**" />
-    <EmbeddedResource Remove="wwwroot\posts\2022\08\20\testPost\**" />
-    <None Remove="wwwroot\posts\2022\08\20\testPost\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\css\" />

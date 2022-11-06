@@ -1,4 +1,4 @@
-﻿using LevaNotes.Web.Interfaces;
+using LevaNotes.Web.Interfaces;
 
 namespace LevaNotes.Web.Models;
 
@@ -17,7 +17,7 @@ public class Post
     public string Category { get; init; }
     public string Slug { get; init; }
     public Languages Language { get; init; }
-    public DateTimeOffset Date { get; init; }
+    public DateTimeOffset CreateDate { get; init; }
     public string ImgName { get; init; }
     public string ImgAlt { get; init; }
 #nullable enable
