@@ -49,7 +49,7 @@ public class PostService
                 Category= "Productivity",
                 BasePath = "/posts/2022/11/06/pomodoro-is-not-productive/",
                 FileName = "pomodoro-is-not-productive.md",
-                Title=" Pomodoro technique is a concurrency of unproductiveness",
+                Title="Pomodoro technique is a concurrency of unproductiveness",
                 //Slug = "publish-a-asp-dotnet-app-on-linux",
                 ImgName = "henry-co-spiral.jpg",
                 ImgAlt= "spiral stares",
