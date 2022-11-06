@@ -2,7 +2,7 @@
 
 We all know what the Pomodoro technique is. You work on a task for 25 minutes, take a five-minute break, and then work for another 25 minutes, and so on. (Read more: [Pomodoro Technique - Wikipedia](https://en.wikipedia.org/wiki/Pomodoro_Technique)).
 
-We also know that when we are in the flow state and get distracted, it takes us about 25 minutes to refocus on the original task or get back into the flow state if you will.
+We also know that when we are in the flow state and get distracted, it takes us about 25 minutes to refocus on the original task or get back into the flow state.
 (Resources: [Why Your Brain Needs More Downtime - Scientific American](https://www.scientificamerican.com/article/mental-downtime/),  [The Cost of Interrupted Work: More Speed and Stress](https://www.ics.uci.edu/~gmark/chi08-mark.pdf), [No Task Left Behind? Examining the Nature of Fragmented Work](https://www.ics.uci.edu/~gmark/CHI2005.pdf) )  
 
 So, after using deductive reasoning I can verify following conjecture:
