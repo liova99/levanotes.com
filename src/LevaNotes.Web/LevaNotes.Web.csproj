@@ -15,6 +15,12 @@
     <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\.well-known\pki-validation\B09B3099F3F9419B14116B368EE979C4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
   <PropertyGroup>
     <ServerGarbageCollection>false</ServerGarbageCollection>
   </PropertyGroup>
