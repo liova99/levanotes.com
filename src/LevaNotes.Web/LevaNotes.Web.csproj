@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SimpleSiteAnalytics" Version="0.0.1-test" />
     <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.9.0" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
 
   <PropertyGroup>
     <ServerGarbageCollection>false</ServerGarbageCollection>
+    <UserSecretsId>93bbb173-2629-451b-88dc-1e7d8f2066e7</UserSecretsId>
   </PropertyGroup>
 
 </Project>
