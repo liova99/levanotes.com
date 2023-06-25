@@ -350,4 +350,7 @@ healthchecksdb
 /src/LevaNotes.Web/wwwroot/posts/2022/08/21/image-20220820114434018.png
 /src/LevaNotes.Web/appsettings.json
 
+/DB
 *.db
+*.db-shm
+*.db-wal
