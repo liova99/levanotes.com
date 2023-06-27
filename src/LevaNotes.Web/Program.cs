@@ -24,7 +24,7 @@ string? connectionString = builder.Configuration.GetConnectionString("SqliteDb")
 
 ArgumentNullException.ThrowIfNull(connectionString);
 
-services.AddSismpleSiteAnalytics(c => c.UseSqlLiteStorage(services, connectionString));
+services.AddSimpleSiteAnalytics(c => c.UseSqlLiteStorage(services, connectionString));
 
 services.AddMemoryCache();
 
