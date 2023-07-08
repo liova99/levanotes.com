@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SimpleSiteAnalytics" Version="0.0.4-test" />
+   <PackageReference Include="SimpleSiteAnalytics" Version="0.0.5-test" />
     <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.9.0" />
   </ItemGroup>
 
