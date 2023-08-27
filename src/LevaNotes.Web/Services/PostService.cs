@@ -18,6 +18,20 @@ public class PostService
         return new HashSet<Post>()
         {
             new Post() {
+                PostId = 15877,
+                Tags= new string[] { "Philosophy", "Random" },
+                Category= "Philosophy",
+                BasePath = "/posts/2017/02/15/truth/",
+                UrlTitle="truth",
+                FileName = "truth.md",
+                Title="Η Αλήθεια",
+                //Slug = "publish-a-asp-dotnet-app-on-linux",
+                ImgName = "randy-jacob-standing-man-reflection.jpg",
+                ImgAlt= "standing man reflection ",
+                Language = Languages.GR,
+                CreateDate = new DateTimeOffset(2017,02,15,0,0,0, new TimeSpan(1,0,0))
+            },
+            new Post() {
                 PostId = 15878,
                 Tags= new string[] {"C#", "ASP.NET" },
                 Category= "ASP.NET",
