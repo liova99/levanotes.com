@@ -22,6 +22,7 @@ public class PostService
                 Tags= new string[] {"C#", "ASP.NET" },
                 Category= "ASP.NET",
                 BasePath = "/posts/2021/02/05/publish-asp-on-linux/",
+                UrlTitle="Publish an ASP.Net App on a Linux VPS",
                 FileName = "publish-asp-on-linux.md",
                 Title="Publish an ASP.Net App on a Linux VPS",
                 //Slug = "publish-a-asp-dotnet-app-on-linux",
@@ -35,6 +36,7 @@ public class PostService
                 Tags= new string[] {"MS-Office", "Outlook" },
                 Category= "MS-Office",
                 BasePath = "/posts/2022/09/24/run-outlook-rule-once/",
+                UrlTitle="How To run Outlook rules once",
                 FileName = "run-outlook-rule-once.md",
                 Title="How To run Outlook rules once",
                 //Slug = "publish-a-asp-dotnet-app-on-linux",
@@ -48,6 +50,7 @@ public class PostService
                 Tags= new string[] {"Productivity", "Fun" },
                 Category= "Productivity",
                 BasePath = "/posts/2022/11/06/pomodoro-is-not-productive/",
+                UrlTitle="Pomodoro technique is a concurrency of unproductiveness",
                 FileName = "pomodoro-is-not-productive.md",
                 Title="Pomodoro technique is a concurrency of unproductiveness",
                 //Slug = "publish-a-asp-dotnet-app-on-linux",
@@ -55,6 +58,20 @@ public class PostService
                 ImgAlt= "spiral stares",
                 Language = Languages.EN,
                 CreateDate = new DateTimeOffset(2022,11,06,0,0,0, new TimeSpan(1,0,0))
+            },
+            new Post() {
+                PostId = 15881,
+                Tags= new string[] { "Philosophy", "Random" },
+                Category= "Philosophy",
+                BasePath = "/posts/2023/08/27/paradeisos/",
+                UrlTitle="Paradeisos",
+                FileName = "paradeisos.md",
+                Title="Παράδεισος",
+                //Slug = "publish-a-asp-dotnet-app-on-linux",
+                ImgName = "timo-volz-sunset_beach.jpg",
+                ImgAlt= "Sunset on the beach",
+                Language = Languages.GR,
+                CreateDate = new DateTimeOffset(2023,08,27,14,0,0, new TimeSpan(1,0,0))
             },
 
         //    new Post() {
@@ -90,7 +107,7 @@ public class PostService
 
     public string CreateRelativePostUrl(Post post)
     {
-        string postUrl = $"/post/{post.Language}/{post.Category}/{post.Title}-{post.PostId}";
+        string postUrl = $"/post/{post.Language}/{post.Category}/{post.UrlTitle}-{post.PostId}";
         postUrl = postUrl.Replace(' ', '-').ToLowerInvariant();
 
         return postUrl;

@@ -12,6 +12,7 @@ public class Post
     public int PostId { get; init; }
     public string[] Tags { get; init; }
     public string BasePath { get; init; }
+    public string UrlTitle { get; set; }
     public string FileName { get; init; }
     public string Title { get; init; }
     public string Category { get; init; }
