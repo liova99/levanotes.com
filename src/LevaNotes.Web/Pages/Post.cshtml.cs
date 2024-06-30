@@ -38,57 +38,57 @@ public class PostModel : PageModel
 
     public async Task<IActionResult> OnGet(string language, string category, string slug)
     {
-            Post? post = await _postService.GetPostBySlugAsync(slug);
+        Post? post = await _postService.GetPostBySlugAsync(slug);
 
-            if (post is null)
-            {
-                return RedirectTo404();
-            }
+        if (post is null)
+        {
+            return RedirectTo404();
+        }
 
-            string basePath = _webHostEnvironment.WebRootPath;
+        string basePath = _webHostEnvironment.WebRootPath;
 
-            string url = Request.Path;
-            string expectedUrl = _postService.CreateRelativePostUrl(post);
+        string url = Request.Path;
+        string expectedUrl = _postService.CreateRelativePostUrl(post);
 
-            if (!url.ToLowerInvariant().Equals(expectedUrl))
-            {
-                return Redirect(expectedUrl);
-            }
+        if (!url.ToLowerInvariant().Equals(expectedUrl))
+        {
+            return Redirect(expectedUrl);
+        }
 
-            if (!TryCreateRelativePath(post.BasePath, post.FileName, out string? relativePath) || string.IsNullOrWhiteSpace(relativePath))
-            {
-                return RedirectTo404();
-            }
+        if (!TryCreateRelativePath(post.BasePath, post.FileName, out string? relativePath) || string.IsNullOrWhiteSpace(relativePath))
+        {
+            return RedirectTo404();
+        }
 
-            string fullFilePath = Path.Combine(basePath, relativePath);
+        string fullFilePath = Path.Combine(basePath, relativePath);
 
-            if (!System.IO.File.Exists(fullFilePath))
-            {
-                return RedirectTo404();
-            }
+        if (!System.IO.File.Exists(fullFilePath))
+        {
+            return RedirectTo404();
+        }
 
-            DateTime lastModified = System.IO.File.GetLastWriteTime(fullFilePath);
+        DateTime lastModified = System.IO.File.GetLastWriteTime(fullFilePath);
 
-            CacheKey = lastModified.ToString() + post.PostId;
+        CacheKey = lastModified.ToString() + post.PostId;
 
-            string markdown = await GetMarkdownFromPathAsync(fullFilePath, cacheKey: CacheKey);
+        string markdown = await GetMarkdownFromPathAsync(fullFilePath, cacheKey: CacheKey);
 
-            if (string.IsNullOrWhiteSpace(markdown))
-            {
-                return RedirectTo404();
-            }
+        if (string.IsNullOrWhiteSpace(markdown))
+        {
+            return RedirectTo404();
+        }
 
-            HtmlString htmText = Markdown.ParseHtmlString(markdown);
+        HtmlString htmText = Markdown.ParseHtmlString(markdown);
 
-            string[] htmlLines = htmText.Value!.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+        string[] htmlLines = htmText.Value!.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
-            string result = AddBasePathToImgUrlsHtml(htmlLines, post.BasePath);
+        string result = AddBasePathToImgUrlsHtml(htmlLines, post.BasePath);
 
-            HtmlStringrFromMD = new HtmlString(result);
-            FilePath = relativePath;
-            Title = post.Title;
+        HtmlStringrFromMD = new HtmlString(result);
+        FilePath = relativePath;
+        Title = post.Title;
 
-            return Page();
+        return Page();
        
     }
 
@@ -98,7 +98,7 @@ public class PostModel : PageModel
     }
 
     private static SemaphoreSlim _lockGetMarkdownFromPathAsync = new(1, 1);
-    public async Task<string> GetMarkdownFromPathAsync(string path, object? cacheKey = null,  bool ignoreCache = false)
+    public async Task<string?> GetMarkdownFromPathAsync(string path, object? cacheKey = null,  bool ignoreCache = false)
     {
         await _lockGetMarkdownFromPathAsync.WaitAsync();
         try
@@ -110,7 +110,7 @@ public class PostModel : PageModel
                 cacheKey = DateTime.UtcNow;
             }
 
-            string markdown = await _memoryCache.GetOrCreateAsync(cacheKey, async entry =>
+            string? markdown = await _memoryCache.GetOrCreateAsync(cacheKey, async entry =>
             {
                 entry.Priority = CacheItemPriority.Low;
                 entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(24);

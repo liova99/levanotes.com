@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -12,11 +12,19 @@
   </ItemGroup>
 
   <ItemGroup>
+   <PackageReference Include="SimpleSiteAnalytics" Version="0.0.5-test" />
     <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\.well-known\pki-validation\B09B3099F3F9419B14116B368EE979C4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <PropertyGroup>
     <ServerGarbageCollection>false</ServerGarbageCollection>
+    <UserSecretsId>93bbb173-2629-451b-88dc-1e7d8f2066e7</UserSecretsId>
   </PropertyGroup>
 
 </Project>

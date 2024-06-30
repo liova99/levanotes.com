@@ -1,6 +1,5 @@
-using LevaNotes.Web.Extensions;
-using LevaNotes.Web.Models;
 using LevaNotes.Web.Services;
+using SimpleSiteAnalytics.Extensions;
 using Westwind.AspNetCore.Markdown;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +9,9 @@ var services = builder.Services;
 
 services.AddRazorPages();
 
-services.AddRouting(options => {
-    
+services.AddRouting(options =>
+{
+
     options.LowercaseUrls = true;
 });
 
@@ -19,6 +19,12 @@ services.AddMarkdown();
 
 services.AddSingleton<PostService>();
 services.AddHostedService<AppInitializerHostedService>();
+
+string? connectionString = builder.Configuration.GetConnectionString("SqliteDb");
+
+ArgumentNullException.ThrowIfNull(connectionString);
+
+services.AddSimpleSiteAnalytics(c => c.UseSqlLiteStorage(services, connectionString));
 
 services.AddMemoryCache();
 
@@ -42,5 +48,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.UseSimpleSiteAnalytics();
 
 app.Run();
