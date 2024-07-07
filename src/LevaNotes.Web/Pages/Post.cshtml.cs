@@ -45,6 +45,15 @@ public class PostModel : PageModel
             return RedirectTo404();
         }
 
+        // todo temp solution (really)
+        // make a new page with: This blogs were moved bla bla bla
+        HashSet<int> idToRedirect = new() {15878, 15879, 15880 };
+        if (idToRedirect.Contains(post.PostId))
+        {
+            return Redirect("https://levankelesidis.com/blog");
+        }
+
+
         string basePath = _webHostEnvironment.WebRootPath;
 
         string url = Request.Path;

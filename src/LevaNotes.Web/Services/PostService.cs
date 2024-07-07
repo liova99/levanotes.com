@@ -112,7 +112,10 @@ public class PostService
     /// <returns></returns>
     public IReadOnlySet<Post> GetPosts(int offset, int max = 10)
     {
+        HashSet<int> idToRedirect = new() { 15878, 15879, 15880 };
+
         IReadOnlySet<Post> posts = _posts.Skip(offset).Take(max)
+            .Where(x => !idToRedirect.Contains(x.PostId))
             .OrderByDescending(x => x.CreateDate)
             .ToHashSet();
         
