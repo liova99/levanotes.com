@@ -93,13 +93,27 @@ public class PostService
                 Category= "Travel",
                 BasePath = "/posts/2025/01/25/trip-to-usa/",
                 UrlTitle="Trip-To-USA-2025",
-                FileName = "trip-to-usa-jan-2025.md",
-                Title="Trip to USA Januar 2025",
+                FileName = "trip-to-usa-jan-2025_gr.md",
+                Title="Trip to USA Januar 2025 (GR)",
                 //Slug = "publish-a-asp-dotnet-app-on-linux",
-                ImgName = "Virginia-City-Road_cr1-1.jpg",
+                ImgName = "Virginia-City-Road_cr1-1_gr.webp",
                 ImgAlt= "Road in Virginia City",
                 Language = Languages.GR,
                 CreateDate = new DateTimeOffset(2025,01,25,14,0,0, new TimeSpan(1,0,0))
+            },
+            new Post() {
+                PostId = 15883,
+                Tags= new string[] { "Travel", "USA", },
+                Category= "Travel",
+                BasePath = "/posts/2025/01/25/trip-to-usa/",
+                UrlTitle="Trip-To-USA-2025",
+                FileName = "trip-to-usa-jan-2025_en.md",
+                Title="Trip to USA Januar 2025 (EN)",
+                //Slug = "publish-a-asp-dotnet-app-on-linux",
+                ImgName = "Virginia-City-Road_cr1-1_en.webp",
+                ImgAlt= "Road in Virginia City",
+                Language = Languages.EN,
+                CreateDate = new DateTimeOffset(2025,02,09,14,0,0, new TimeSpan(1,0,0))
             },
 
         //    new Post() {
