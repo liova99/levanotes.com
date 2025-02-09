@@ -87,6 +87,20 @@ public class PostService
                 Language = Languages.GR,
                 CreateDate = new DateTimeOffset(2023,08,27,14,0,0, new TimeSpan(1,0,0))
             },
+            new Post() {
+                PostId = 15882,
+                Tags= new string[] { "Travel", "USA", },
+                Category= "Travel",
+                BasePath = "/posts/2025/01/25/trip-to-usa/",
+                UrlTitle="Trip-To-USA-2025",
+                FileName = "trip-to-usa-jan-2025.md",
+                Title="Trip to USA Januar 2025",
+                //Slug = "publish-a-asp-dotnet-app-on-linux",
+                ImgName = "timo-volz-sunset_beach.jpg",
+                ImgAlt= "Sunset on the beach",
+                Language = Languages.GR,
+                CreateDate = new DateTimeOffset(2025,01,25,14,0,0, new TimeSpan(1,0,0))
+            },
 
         //    new Post() {
         //        PostId = 15879,
