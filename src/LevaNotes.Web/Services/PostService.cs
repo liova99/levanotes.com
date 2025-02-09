@@ -96,8 +96,8 @@ public class PostService
                 FileName = "trip-to-usa-jan-2025.md",
                 Title="Trip to USA Januar 2025",
                 //Slug = "publish-a-asp-dotnet-app-on-linux",
-                ImgName = "timo-volz-sunset_beach.jpg",
-                ImgAlt= "Sunset on the beach",
+                ImgName = "Virginia-City-Road_cr1-1.jpg",
+                ImgAlt= "Road in Virginia City",
                 Language = Languages.GR,
                 CreateDate = new DateTimeOffset(2025,01,25,14,0,0, new TimeSpan(1,0,0))
             },
