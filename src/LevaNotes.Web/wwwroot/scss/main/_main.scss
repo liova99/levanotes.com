@@ -146,3 +146,30 @@ code {
     padding-left: 0;
     padding-right: 0;
 }
+
+.toTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: all .5s ease;
+    opacity: 0;
+    z-index: 100;
+    border:none;
+
+    @include media-up(xl) {
+        right: 15%;
+    }
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.upArrorSvg{
+    width: 70px;
+    height: 70px;
+}

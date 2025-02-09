@@ -42,6 +42,9 @@
             @RenderBody()
         </main>
     </div>
+    <button onclick="scrollToTop()" id="toTopBtn" class="toTopBtn" title="Go to top">
+        <img class="upArrorSvg" src="/svg/up-arrow.svg"/>
+    </button>
 
     <cache vary-by="@DateTime.UtcNow.Year">
         <footer class="border-top footer text-muted">
