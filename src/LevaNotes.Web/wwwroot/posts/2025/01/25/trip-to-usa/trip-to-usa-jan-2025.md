@@ -1,62 +1,63 @@
 
 <div class="md-toc" mdtype="toc">
 	<p class="md-toc-content" role="list">
-		<span role="listitem" class="md-toc-item md-toc-h1" data-ref="n3637">
+		<span role="listitem" class="md-toc-item md-toc-h1" data-ref="n8294">
 			<a class="md-toc-inner" href="#δύο-σκ-στην-αμερική">Δύο ΣΚ στην Αμερική</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3639">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8296">
 			<a class="md-toc-inner" href="#εισαγωγή">Εισαγωγή </a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3645">
-			<a class="md-toc-inner" href="#γενικές-εντυπώσεις----σχόλια---random-παρατηρήσεις">Γενικές εντυπώσεις – Σχόλια - Random παρατηρήσεις </a>
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8302">
+			<a class="md-toc-inner" href="#γενικές-εντυπώσεις--σχόλια---random-παρατηρήσεις">Γενικές εντυπώσεις – Σχόλια - Random παρατηρήσεις </a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3682">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8339">
 			<a class="md-toc-inner" href="#η-πτήση">Η πτήση</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3694">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8351">
 			<a class="md-toc-inner" href="#reno-nevada">Reno Nevada</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3713">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8370">
 			<a class="md-toc-inner" href="#san-francisco">San Francisco</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3771">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8428">
 			<a class="md-toc-inner" href="#las-vegas">Las Vegas</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3804">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8461">
 			<a class="md-toc-inner" href="#lake-tahoe">Lake Tahoe</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3825">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8482">
 			<a class="md-toc-inner" href="#virginia-city">Virginia City</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3850">
+		<span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8507">
 			<a class="md-toc-inner" href="#μουσεία">Μουσεία</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3852">
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8509">
 			<a class="md-toc-inner" href="#san-francisco-museum-of-modern-art">San Francisco Museum of Modern Art</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3862">
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8519">
 			<a class="md-toc-inner" href="#las-vegas-the-mob-museum">Las Vegas The Mob Museum</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3873">
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8530">
 			<a class="md-toc-inner" href="#las-vegas-atomic-museum">Las Vegas Atomic Museum</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3883">
-			<a class="md-toc-inner" href="#nevada-state-museum-carson-city">Nevada State Museum Carson City</a>
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8540">
+			<a class="md-toc-inner" href="#carson-city-nevada-state-museum">Carson City Nevada State Museum</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3895">
-			<a class="md-toc-inner" href="#chollar-mine-virginia-city---ορυχείο">Chollar mine Virginia City - Ορυχείο</a>
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8552">
+			<a class="md-toc-inner" href="#virginia-city-chollar-mine---ορυχείο">Virginia City Chollar mine - Ορυχείο</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3903">
-			<a class="md-toc-inner" href="#the-way-it-was-museum-virginia-city">The Way It Was Museum Virginia City</a>
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8560">
+			<a class="md-toc-inner" href="#virginia-city-the-way-it-was-museum">Virginia City The Way It Was Museum</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3907">
-			<a class="md-toc-inner" href="#nevada-museum-of-art-reno">Nevada Museum of Art Reno</a>
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8564">
+			<a class="md-toc-inner" href="#reno-nevada-museum-of-art">Reno Nevada Museum of Art</a>
 		</span>
-		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3910">
-			<a class="md-toc-inner" href="#national-automobile-museum-reno">National Automobile Museum Reno</a>
+		<span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8567">
+			<a class="md-toc-inner" href="#reno-national-automobile-museum">Reno National Automobile Museum</a>
 		</span>
 	</p>
 </div>
+
 
 # Δύο ΣΚ στην Αμερική
 
@@ -74,7 +75,8 @@
 
 Στο πρώτο ΣΚ πέταξα στον San Fransisco και μετά στο Las Vegas. Στο Δεύτερο ενοικίασα ένα αμάξι. Έκανα μια βόλτα γύρο από την Λίμνη Τάχο (Lake Tahoe) και επισκέφτηκα την άγρια δύση στην Virginia City.
 
-## Γενικές εντυπώσεις – Σχόλια - Random παρατηρήσεις 
+## Γενικές εντυπώσεις – Σχόλια - Random παρατηρήσεις
+
 - Στα αεροδρόμια πρέπει να βγάζεις τα παπούτσια στον έλεγχο (μόνο στην Ρωσία θυμάμαι κάτι παρόμοιο). Επίσης, γίνετε πάντα έλεγχος διαβατηρίου. 
 - Η Southwest Airlines δεν σου δίνη θέσει στο αεροπλάνο. Μπαίνεις με μία σειρά προτεραιότητας (κάπως περίεργη, όχι 1-5 όπως σε άλλες αεροπορικές) και όπου θες κάθεσαι. 
 - Όσοι είναι ενεργή στον στρατό έχουν προτεραιότητα να μπουν στο αεροπλάνο και στην ανακοίνωση για το ξεκίνημα της επιβίβασης λένε πάντα το κλασικό «thank you for your service». 
@@ -87,7 +89,6 @@
 - Στην τηλεόραση έχει διαφημίσεις ανά 8-10 λεπτά. Διαφημίζουν κάτι φάρμακα για αδυνάτισμα τα οποία μπορούν να προκαλέσουν τάσεις αυτοκτονίας… 
 - Έτυχε να καλέσω Uber και να έρθει ένας με ένα τεράστιο αμερικάνικο αγροτικό pickup truck. Γενικά εκεί έχουν πολλοί τέτοια pickup και τα έχουν σαν αμάξι. Δεν τα αγοράζουν γιατί τα χρειάζονται σαν αγροτικό. 
 - Όταν οδηγείς σε δρόμο με στροφές, πριν την στροφή έχει πινακίδα που σε προειδοποιεί με πόσα μίλια την ώρα πρέπει να πάρεις την στροφή.
-
 
 <img src="TahoeTurn.webp" alt="A turn in Tahoe lake" orientation="p" />
 
@@ -508,7 +509,7 @@ No comments
 
  
 
-### Nevada State Museum Carson City
+### Carson City Nevada State Museum
 
 <img src="usa-64.webp" alt="Nevada State Museum Carson City" orientation="p" />
 
@@ -532,7 +533,7 @@ A lot of guns…
 
 <img src="usa-69.webp" alt="Mammoth in Nevada State Museum Carson City" orientation="l" />
 
-### Chollar mine Virginia City - Ορυχείο
+### Virginia City Chollar mine - Ορυχείο
 
 <img src="usa-91.webp" alt="Chollar mine Virginia City" />
 
@@ -548,7 +549,7 @@ A lot of guns…
 
 <img src="usa-95.webp" alt="Chollar mine Virginia City - Mine toilets" orientation="p" />
 
-### The Way It Was Museum Virginia City
+### Virginia City The Way It Was Museum
 
 Δεν έχει κάτι να αναφέρω. Είναι μουσείο με παλιά αντικείμενα της πόλης. 
 
@@ -556,13 +557,13 @@ A lot of guns…
 
 <img src="usa-collage-8.webp" alt="The way it was Museum Virginia City" />
 
-### Nevada Museum of Art Reno
+### Reno Nevada Museum of Art
 
 Το Nevada Museum of Art ήταν λίγο χάσιμο χρόνου. Είχε κόκαλα από θαλάσσιους Ιχθυόσαυρους που ζούσαν 240 εκατομμύρια χρόνια πριν, αλλά «Art» δεν είδα (λόγο κατασκευών ήταν κλειστό μεγάλο μέρος του μουσείου). 
 
 <img src="usa-collage-11.webp" alt="Nevada Museum of Art Reno" orientation="p"  />
 
-### National Automobile Museum Reno
+### Reno National Automobile Museum
 
 Το συγκεκριμένο μου άρεσε. Μπορούσες να δεις εκτός άλλον τα πρώτα αμάξια που φτιάχτηκαν ποτέ στα τέλη του 19ου αιώνα, κάτι τεράστια αμάξια πολυτελείας του 1910-1920, Mercedes του 1930 και αγωνιστικά από την Formula 1. 
 
