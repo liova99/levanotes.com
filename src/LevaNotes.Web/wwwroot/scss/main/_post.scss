@@ -8,51 +8,63 @@
         border-radius: 4px;
     }
 
-    .img-lg, .img-lg-nr, .img-md {
+    .img-std, .img-port, .img-land, .img {
         max-width: $site-container-width;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $clr-light-gray;
+        //background-color: $clr-light-gray;
         border-radius: 4px;
         padding-left: .5rem;
         padding-right: .5rem;
+        margin: 1rem 0;
+        //width: calc(-2px + min(700px, 100vw));
     }
 
-    .img-lg {
-        height: 220px;
+    .img-port {
+        height: 464px;
     }
 
-    .img-lg-nr {
-        height: 90px;
+    .img-land {
+        height: 215px;
     }
 
-    .img-md {
+    .img-std {
         height: 350px;
     }
 
 
     @include media-up(sm) {
-        .img-lg {
-            height: 420px;
-        }
 
-        .img-lg-nr {
-            height: 180px;
-        }
-
-        .img-md {
+        .img-std {
             height: 400px;
+        }
+
+        .img-port {
+            height: 635px;
+        }
+
+        .img-land {
+            height: 266px;
         }
     }
 
     @include media-up(md) {
-        .img-lg {
+
+        .img-std {
             height: 500px;
         }
 
-        .img-lg-nr {
-            height: 200px;
+        .img-port {
+            height: 855px;
+        }
+
+        .img-land {
+            height: 358px;
+        }
+
+        video {
+            max-height: 500px;
         }
     }
 }
@@ -71,3 +83,66 @@
         font-size: .9rem;
     }
 }
+
+/*#region Typora - TOC */
+
+/*
+    This code take from typora.
+    To crate toc, I take the html code
+    generated from typora. 
+*/
+
+.md-toc {
+    min-height: 3.58rem;
+    position: relative;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
+.md-toc-content {
+    position: relative;
+    margin-left: 0px;
+}
+.md-toc-item {
+    display: block;
+    color: #A8C2DC;
+}
+
+.md-toc-h1 .md-toc-inner {
+    margin-left: 0px;
+    font-weight: 700;
+}
+
+a.md-toc-inner {
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+.md-toc-h1 .md-toc-inner {
+    margin-left: 0px;
+    font-weight: 700;
+}
+
+.md-toc-h2 .md-toc-inner {
+    margin-left: 2em;
+}
+
+.md-toc-h3 .md-toc-inner {
+    margin-left: 4em;
+}
+
+.md-toc-h4 .md-toc-inner {
+    margin-left: 6em;
+}
+
+.md-toc-h5 .md-toc-inner {
+    margin-left: 8em;
+}
+
+.md-toc-h6 .md-toc-inner {
+    margin-left: 10em;
+}
+
+/*#endregion */

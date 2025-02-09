@@ -11,6 +11,7 @@ p {
   font-size: 1.1rem;
   line-height: 1.6rem;
   font-weight: 400;
+  overflow-wrap: break-word;
 }
 
 li {
@@ -95,7 +96,6 @@ code::-webkit-scrollbar-thumb {
   padding-left: 0.1rem;
   padding-right: 0.1rem;
   min-height: 50vh;
-  max-width: 350px;
 }
 @media (min-width: 576px) {
   .post-wrapp {
@@ -110,6 +110,10 @@ code::-webkit-scrollbar-thumb {
     padding-right: 0;
   }
 }
+.post-wrapp p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .post-wrapp p img {
   max-width: 700px;
   display: flex;
@@ -119,6 +123,15 @@ code::-webkit-scrollbar-thumb {
   border-radius: 4px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.post-wrapp .h1, .post-wrapp .h2, .post-wrapp .h3, .post-wrapp .h4, .post-wrapp .h5, .post-wrapp .h6, .post-wrapp h1, .post-wrapp h2, .post-wrapp h3, .post-wrapp h4, .post-wrapp h5, .post-wrapp h6 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 header {
@@ -266,42 +279,48 @@ header nav ul {
   box-shadow: 0px 0px 18px 2px #3C3C3C;
   border-radius: 4px;
 }
-.post-wrapp .img-lg, .post-wrapp .img-lg-nr, .post-wrapp .img-md {
+.post-wrapp .img-std, .post-wrapp .img-port, .post-wrapp .img-land, .post-wrapp .img {
   max-width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E8E8E8;
   border-radius: 4px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  margin: 1rem 0;
 }
-.post-wrapp .img-lg {
-  height: 220px;
+.post-wrapp .img-port {
+  height: 464px;
 }
-.post-wrapp .img-lg-nr {
-  height: 90px;
+.post-wrapp .img-land {
+  height: 215px;
 }
-.post-wrapp .img-md {
+.post-wrapp .img-std {
   height: 350px;
 }
 @media (min-width: 576px) {
-  .post-wrapp .img-lg {
-    height: 420px;
-  }
-  .post-wrapp .img-lg-nr {
-    height: 180px;
-  }
-  .post-wrapp .img-md {
+  .post-wrapp .img-std {
     height: 400px;
+  }
+  .post-wrapp .img-port {
+    height: 635px;
+  }
+  .post-wrapp .img-land {
+    height: 266px;
   }
 }
 @media (min-width: 768px) {
-  .post-wrapp .img-lg {
+  .post-wrapp .img-std {
     height: 500px;
   }
-  .post-wrapp .img-lg-nr {
-    height: 200px;
+  .post-wrapp .img-port {
+    height: 855px;
+  }
+  .post-wrapp .img-land {
+    height: 358px;
+  }
+  .post-wrapp video {
+    max-height: 500px;
   }
 }
 
@@ -317,5 +336,67 @@ header nav ul {
 .github-box .post-wrap-note {
   font-size: 0.9rem;
 }
+
+/*#region Typora - TOC */
+/*
+    This code take from typora.
+    To crate toc, I take the html code
+    generated from typora. 
+*/
+.md-toc {
+  min-height: 3.58rem;
+  position: relative;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.md-toc-content {
+  position: relative;
+  margin-left: 0px;
+}
+
+.md-toc-item {
+  display: block;
+  color: #A8C2DC;
+}
+
+.md-toc-h1 .md-toc-inner {
+  margin-left: 0px;
+  font-weight: 700;
+}
+
+a.md-toc-inner {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.md-toc-h1 .md-toc-inner {
+  margin-left: 0px;
+  font-weight: 700;
+}
+
+.md-toc-h2 .md-toc-inner {
+  margin-left: 2em;
+}
+
+.md-toc-h3 .md-toc-inner {
+  margin-left: 4em;
+}
+
+.md-toc-h4 .md-toc-inner {
+  margin-left: 6em;
+}
+
+.md-toc-h5 .md-toc-inner {
+  margin-left: 8em;
+}
+
+.md-toc-h6 .md-toc-inner {
+  margin-left: 10em;
+}
+
+/*#endregion */
 
 /*# sourceMappingURL=site.css.map */

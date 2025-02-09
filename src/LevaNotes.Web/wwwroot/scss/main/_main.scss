@@ -16,6 +16,7 @@ p {
     font-size: $text-font-size;
     line-height: 1.6rem;
     font-weight: 400;
+    overflow-wrap: break-word;
 }
 
 li {
@@ -106,7 +107,7 @@ code {
     padding-left: .1rem;
     padding-right: .1rem;
     min-height: 50vh;
-    max-width: 350px;
+    //max-width: 350px;
 
     @include media-up(sm) {
         max-width: $site-container-width;
@@ -130,5 +131,18 @@ code {
             padding-left: 0.5rem;
             padding-right: 0.5rem;
         }
+
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        padding-left: 1rem;
+        padding-right: 1rem; 
+    }
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
 }

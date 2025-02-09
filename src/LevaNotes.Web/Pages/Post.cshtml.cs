@@ -1,18 +1,12 @@
+using System.Text;
+using System.Text.RegularExpressions;
 using LevaNotes.Web.Models;
 using LevaNotes.Web.Services;
-using Markdig.Helpers;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Caching.Memory;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using Westwind.AspNetCore.Markdown;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace LevaNotes.Web.Pages;
 
@@ -25,7 +19,7 @@ public class PostModel : PageModel
 
     public PostModel(PostService postService, IWebHostEnvironment webHostEnvironment, IMemoryCache memoryCache, ILogger<PostModel> logger)
     {
-         _postService = postService;
+        _postService = postService;
         _webHostEnvironment = webHostEnvironment;
         _memoryCache = memoryCache;
         _logger = logger;
@@ -47,7 +41,7 @@ public class PostModel : PageModel
 
         // todo temp solution (really)
         // make a new page with: This blogs were moved bla bla bla
-        HashSet<int> idToRedirect = new() {15878, 15879, 15880 };
+        HashSet<int> idToRedirect = new() { 15878, 15879, 15880 };
         if (idToRedirect.Contains(post.PostId))
         {
             return Redirect("https://levankelesidis.com/blog");
@@ -98,7 +92,7 @@ public class PostModel : PageModel
         Title = post.Title;
 
         return Page();
-       
+
     }
 
     private IActionResult RedirectTo404()
@@ -107,7 +101,7 @@ public class PostModel : PageModel
     }
 
     private static SemaphoreSlim _lockGetMarkdownFromPathAsync = new(1, 1);
-    public async Task<string?> GetMarkdownFromPathAsync(string path, object? cacheKey = null,  bool ignoreCache = false)
+    public async Task<string?> GetMarkdownFromPathAsync(string path, object? cacheKey = null, bool ignoreCache = false)
     {
         await _lockGetMarkdownFromPathAsync.WaitAsync();
         try
@@ -246,18 +240,19 @@ public class PostModel : PageModel
     private string AddBasePathToImgUrlsHtml(string[] htmlLines, string baseImgPath)
     {
         // todo support video too
+        // todo - cleanup :)
 
         StringBuilder md = new();
 
         baseImgPath = NormalizeHtmlSrcRelativeUrl(baseImgPath);
 
-        foreach(var line in htmlLines)
+        foreach (var line in htmlLines)
         {
             string[] wordsInLine = line.Split(" ");
 
             int imagesCountInLine = wordsInLine.Count(x => x.Contains("<img"));
 
-            if(imagesCountInLine == 0)
+            if (imagesCountInLine == 0)
             {
                 md.Append(line + Environment.NewLine);
                 continue;
@@ -268,15 +263,26 @@ public class PostModel : PageModel
                     "Base Path: {baseImgPath}", baseImgPath);
             }
 
+            string imgClass = "img-std";
             // if a line has more than one img, (which is actually unexpected)
             // by the next iteration we will work with the substring which is after the previous img
             int nextIndex = 0;
-            string newLine =  string.Empty;
+            string newLine = string.Empty;
             for (int i = 0; i < imagesCountInLine; i++)
             {
+
                 string startPatern = "<img src=\"";
 
                 string linePart = line.Substring(nextIndex);
+
+                if (linePart.Contains("orientation=\"p\""))
+                {
+                    imgClass = "img-port";
+                }
+                else if (linePart.Contains("orientation=\"l\""))
+                {
+                    imgClass = "img-land";
+                }
 
                 int startIndex = linePart.IndexOf(startPatern, StringComparison.InvariantCultureIgnoreCase) + startPatern.Length;
 
@@ -303,17 +309,18 @@ public class PostModel : PageModel
             }
 
             newLine = newLine.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
-            md.Append("<div class=\"img-md\" >");
+
+            md.Append($"<div class=\"{imgClass}\">");
+            newLine = newLine.Replace($"<img", $"<img loading=\"lazy\"");
             md.Append(newLine + Environment.NewLine);
             md.Append("</div>");
-
         }
 
         string result = md.ToString();
 
         return result;
     }
-    
+
     private string AddBasePathToImgUrlsHtmlWithRegEx(string[] lines, string baseImgPath)
     {
         StringBuilder md = new();
@@ -327,7 +334,7 @@ public class PostModel : PageModel
                 continue;
             }
 
-            Regex rx = new("src\\s*=\\s*\"(.+?)\"",RegexOptions.IgnoreCase);
+            Regex rx = new("src\\s*=\\s*\"(.+?)\"", RegexOptions.IgnoreCase);
 
             MatchCollection matches = rx.Matches(line);
 
